@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Lato&display=swap");
+
+:root {
+	--display: "Cormorant Garamond";
+	--normal: "Lato";
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100svh;
+	background: #0a0114;
+	color: rgb(255, 255, 255);
+	padding: 0 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+#content,
+h1,
+h3 {
+	cursor: default;
+}
+
+h1 {
+	font-family: var(--display);
+	font-size: 6rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+h3 {
+	font-family: var(--display);
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+#contact {
+	margin-top: 5rem;
+	display: flex;
+}
+
+.link {
+	color: white;
+	fill: white;
+	font-family: var(--normal);
+	font-size: 1.2rem;
+	letter-spacing: 0.075rem;
+	text-decoration: none;
+	display: flex;
+	height: 3rem;
+	padding: 0.5rem;
+	align-items: center;
+	margin-right: 1rem;
+	position: relative;
+}
+
+svg {
+	height: 90%;
+}
+
+.link span {
+	margin-left: 10px;
+}
+
+.link-fill {
+	z-index: -50;
+	left: 0;
+	position: absolute;
+	background-color: rgba(255, 166, 0, 0.5);
+	height: 100%;
+	width: 0;
+	transition: 0.2s;
+}
+
+.link:hover .link-fill {
+	width: 100%;
+}
+
+#toast {
+	background-color: rgba(255, 166, 0, 0.5);
+	height: 4.5rem;
+	width: 17rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: var(--normal);
+	font-size: 0.9rem;
+	letter-spacing: 0.05rem;
+	box-shadow: 0 2px 5px 10px rgba(0, 0, 0, 0.5);
+	border-radius: 4px;
+	position: absolute;
+	right: 1.5rem;
+	bottom: -15rem;
+	transition: 0.4s;
+}
+
+.reveal {
+	bottom: 1.5em !important;
+}
+
+@media only screen and (max-width: 480px) {
+	h1 {
+		font-size: 4.5rem;
+	}
+	h3 {
+		font-size: 1.5rem;
+	}
+	#contact {
+		flex-direction: column;
+	}
+	.link {
+		font-size: 1rem;
+	}
+}
